@@ -22,7 +22,6 @@ const isOnboarded = authUser?.isOnboarded
   if (isLoading)  return <Loader/>
   return (
     <div>
-
       <Routes>
         <Route path='/' element={isAuthenticated && isOnboarded ? (
           <Layout showSidebar>

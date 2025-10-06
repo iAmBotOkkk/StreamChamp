@@ -1,0 +1,885 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 3463
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 22 Tf
+25.2999999999999972 TL
+0 g
+177.2977952755905733 785.1970866141732586 Td
+(Resume Analysis Report) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+233.0777952755905744 742.6774015748030706 Td
+(Generated on 10/4/2025) Tj
+ET
+BT
+/F1 16 Tf
+18.3999999999999986 TL
+0 g
+56.6929133858267775 685.9844881889763428 Td
+(Interview Questions) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 643.4648031496062686 Td
+(1. You mentioned using React, Node.js, and PostgreSQL in your Expense Tracker) Tj
+T* (project. Walk us through how you structured the backend API endpoints for CRUD) Tj
+T* (operations on expenses, and how you ensured data consistency when multiple) Tj
+T* (users might update the same expense record concurrently. Did you use) Tj
+T* (transactions? How did you handle validation and error responses?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 544.2522047244094665 Td
+(Type: technical | Difficulty: Medium) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 524.4096850393700606 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 504.5671653543306547 Td
+(In my Expense Tracker, I built a REST API using Node.js and Express with PostgreSQL) Tj
+T* (as the database. I created endpoints like POST /expenses, GET /expenses, PUT) Tj
+T* (/expenses/:id, and DELETE /expenses/:id. For data consistency, I used PostgreSQL) Tj
+T* (transactions wrapped in async/await with try-catch blocks — for example, when) Tj
+T* (updating an expense, I began a transaction, validated the user's ownership, updated the) Tj
+T* (record, and committed only if all steps succeeded. I used pg-promise for transaction) Tj
+T* (management. Validation was handled with Joi schema validation on the backend,) Tj
+T* (returning 400 Bad Request with clear error messages for invalid categories or negative) Tj
+T* (amounts. I also added optimistic locking via a version_number column to prevent race) Tj
+T* (conditions during concurrent updates. This reduced data corruption incidents to zero) Tj
+T* (during testing with 50+ concurrent simulated users.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 272.1262204724408775 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 252.2837007874014716 Td
+(• Always tie your answer to actual code decisions you made — interviewers want to hear) Tj
+T* (your thought process, not textbook answers.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 212.5986614173227736 Td
+(• Emphasize measurable outcomes like 'reduced errors by X%' or 'handled Y concurrent) Tj
+T* (requests' even if estimated — it shows impact.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 172.9136220472439618 Td
+(• What interviewers are really looking for: Can you design a production-grade API with) Tj
+T* (reliability, not just a prototype?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 119.0553543307086102 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 99.2128346456692043 Td
+(• How would you scale this to handle 10,000 concurrent users? Would you consider) Tj
+T* (caching or read replicas?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 59.5277952755905062 Td
+(• What if a user deletes an expense while another user is editing it? How would you) Tj
+T* (notify them?) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4728
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 771.0238582677164914 Td
+(2. You used AI in your To-Do List Notification System to generate catchy messages.) Tj
+T* (Can you explain what AI technique you used — was it prompt engineering with) Tj
+T* (OpenAI, fine-tuning, or something else? How did you measure if the AI-generated) Tj
+T* (notifications actually improved user productivity? Did you track click-through rates) Tj
+T* (or task completion rates?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 671.8112598425196893 Td
+(Type: technical | Difficulty: Medium) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 651.9687401574802834 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 632.1262204724408775 Td
+(I used OpenAI's GPT-3.5 API via prompt engineering — I designed templates like 'Hey) Tj
+T* ({name}, you’ve had 3 overdue tasks! Complete one now to unlock your streak!' and) Tj
+T* (dynamically inserted user data. I didn’t fine-tune because I lacked labeled data. To) Tj
+T* (measure impact, I ran a 2-week A/B test with 50 users: Group A got static reminders,) Tj
+T* (Group B got AI-generated ones. I tracked task completion rate and notification open rate) Tj
+T* (via Firebase analytics. Group B showed a 38% higher task completion rate and 52%) Tj
+T* (higher open rate. I also logged user feedback: 74% preferred AI messages. This taught) Tj
+T* (me that even simple AI nudges can drive behavior change — but only if grounded in) Tj
+T* (measurable metrics.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 439.3703149606298552 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 419.5277952755905062 Td
+(• Even if you didn't use ML, show you understand AI as a tool — focus on data,) Tj
+T* (measurement, and iteration.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 379.8427559055117513 Td
+(• Quantify everything: 'improved productivity' is vague — convert it to % increases in) Tj
+T* (task completion, retention, or engagement.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 340.1577165354329964 Td
+(• What interviewers are really looking for: Can you treat AI as a feature, not a buzzword?) Tj
+T* (Do you validate assumptions?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 286.2994488188975311 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 266.4569291338582389 Td
+(• What would you do if the AI started generating inappropriate or repetitive messages?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 246.614409448818833 Td
+(• How would you reduce API costs while maintaining effectiveness?) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 212.5986614173227736 Td
+(3. Tell me about a time you had to learn a new technology quickly to complete a) Tj
+T* (project \(e.g., learning PostgreSQL after working with MySQL\). What was the) Tj
+T* (challenge, what steps did you take, and what was the outcome? Use the STAR) Tj
+T* (method.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 133.2285826771652637 Td
+(Type: behavioral | Difficulty: Medium) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 113.3860629921258578 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 93.5435433070865656 Td
+(Situation: In my Expense Tracker, I initially used MySQL but realized I needed) Tj
+T* (transaction support and better JSON handling for category analytics, so I migrated to) Tj
+T* (PostgreSQL. Task: I had 10 days to migrate without breaking existing functionality.) Tj
+T* (Action: I first studied PostgreSQL’s documentation on data types and transactions over 2) Tj
+T* (days. Then I wrote a migration script using Node.js to dump MySQL data, transform it) Tj
+T* (\(e.g., converting TEXT to JSONB\), and reinsert into PostgreSQL. I wrote unit tests using) Tj
+T* (Jest to validate data integrity. I also set up a rollback plan using SQL dumps. I consulted) Tj
+T* (Stack Overflow and the PostgreSQL subreddit daily. Outcome: The migration completed) Tj
+T* (in 9 days. Data consistency improved — category aggregation queries became 40%) Tj
+T* (faster. No user-reported bugs post-deployment. I learned that structured learning +) Tj
+T* (testing = successful tech adoption.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 -138.8974015748032116 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 -158.7399212598426175 Td
+(• Use STAR religiously — interviewers spot vague stories instantly.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 3689
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 785.1970866141732586 Td
+(• Highlight learning resources you used — it shows initiative.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 765.3545669291338527 Td
+(• What interviewers are really looking for: Can you self-educate under pressure? Do you) Tj
+T* (test before deploying?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 711.4962992125983874 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 691.6537795275589815 Td
+(• What was the most confusing part of PostgreSQL compared to MySQL?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 671.8112598425196893 Td
+(• How would you handle this migration in a production environment with live users?) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 637.7955118110235162 Td
+(4. You interned at Numaligarh Refinery and studied a C# and SQL Server call logging) Tj
+T* (system. Describe a time you identified a flaw or inefficiency in a system you were) Tj
+T* (observing — even if you didn’t fix it. What did you notice, how did you communicate) Tj
+T* (it, and what was the response?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 558.42543307086612 Td
+(Type: behavioral | Difficulty: Hard) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 538.5829133858267141 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 518.7403937007873083 Td
+(While observing the call logging system, I noticed that every call event was logged as a) Tj
+T* (separate row in SQL Server with no indexing on timestamps or caller ID. Queries to) Tj
+T* (generate daily reports took over 12 seconds. I asked the team lead why they didn’t use a) Tj
+T* (composite index on \(caller_id, timestamp\). They said they hadn’t considered it because) Tj
+T* (the system was 'legacy.' I wrote a quick SQL script showing how adding the index) Tj
+T* (reduced query time to under 800ms on a sample dataset of 50k records. I presented it in) Tj
+T* (a 5-minute summary during a team sync. The lead was impressed and added it to the) Tj
+T* (backlog. Though I didn’t implement it, I later learned they deployed it in the next sprint.) Tj
+T* (This taught me that observation + data-backed communication can drive change even) Tj
+T* (as an intern.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 306.1419685039369369 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 286.2994488188975311 Td
+(• Even if you didn’t implement the fix, show how you added value through insight and) Tj
+T* (communication.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 246.614409448818833 Td
+( •   U s e   n u m b e r s :   ' 1 2 s  !’   0 . 8 s '   i s   p o w e r f u l .   I f   y o u   d o n ’ t   h a v e   e x a c t   n u m b e r s ,   e s t i m a t e) Tj
+T* (clearly and say 'based on sample data.') Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 206.9293700787401349 Td
+(• What interviewers are really looking for: Do you think like an engineer, not just a) Tj
+T* (passive observer?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 153.0711023622046696 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 133.2285826771652637 Td
+(• What would you do if your suggestion was ignored?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 113.3860629921258578 Td
+(• How would you document your findings so a future engineer could understand them?) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 3093
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(5. Imagine you’re tasked with scaling your AI To-Do List app to 100,000 active users.) Tj
+T* (Walk us through your architecture. How would you handle real-time notifications, AI) Tj
+T* (message generation at scale, database load, and user personalization? Include) Tj
+T* (technologies you’d use and why.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 705.8270078740157487 Td
+(Type: system-design | Difficulty: Hard) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 685.9844881889763428 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 666.1419685039369369 Td
+(For 100k users, I’d decouple components. Frontend: React with Redux Toolkit for state.) Tj
+T* (Backend: Node.js microservices — one for user management, one for task CRUD, one) Tj
+T* (for AI notifications. Notifications would use WebSockets \(Socket.io\) for real-time) Tj
+T* (delivery, not polling. AI generation: Offload to a separate service using AWS Lambda or) Tj
+T* (a containerized GPT API with rate limiting and caching via Redis. I’d cache frequently) Tj
+T* (used message templates \(e.g., 'You have 3 overdue tasks'\) per user segment \(e.g.,) Tj
+T* (students, professionals\). Database: PostgreSQL for transactional data \(tasks, users\),) Tj
+T* (with read replicas for analytics. For personalization, I’d store user preferences \(e.g.,) Tj
+T* (preferred tone: professional vs. casual\) in a JSONB field. I’d use a message queue) Tj
+T* (\(RabbitMQ\) to batch AI requests and avoid API overload. Monitoring: Prometheus +) Tj
+T* (Grafana for latency and error rates. I’d also implement fallback: if AI fails, send a static) Tj
+T* (template. This ensures uptime even if OpenAI is down.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 413.8585039370078107 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 394.0159842519684616 Td
+(• Don’t just list tech — explain why you chose each component \(e.g., 'Redis for caching) Tj
+T* (because it’s in-memory and handles 100k ops/sec'\).) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 354.3309448818897067 Td
+(• Show awareness of failure modes: What if AI is slow? What if DB is overloaded?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 334.4884251968503008 Td
+(• What interviewers are really looking for: Can you design for scale, resilience, and user) Tj
+T* (experience — not just features?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 280.6301574803148924 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 260.7876377952754865 Td
+(• How would you handle burst traffic during Monday mornings when users log in and get) Tj
+T* (overwhelmed with todos?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 221.1025984251967884 Td
+(• How would you ensure the AI doesn’t become biased or repetitive across users?) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 2533
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(6. Why do you want to work as a full-stack developer at a product-driven company) Tj
+T* (like ours, instead of sticking to backend or frontend alone? What excites you about) Tj
+T* (building end-to-end features?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 725.6695275590550409 Td
+(Type: cultural | Difficulty: Easy) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 705.8270078740157487 Td
+(Model Answer:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 685.9844881889763428 Td
+(I love full-stack because I see the full impact of my work. In my Expense Tracker, I) Tj
+T* (designed the UI in React, built the API in Node.js, and chose PostgreSQL to make) Tj
+T* (analytics fast — seeing users actually track their spending because of my code was) Tj
+T* (incredibly rewarding. I don’t want to be siloed; I want to own features from idea to) Tj
+T* (deployment. At Numaligarh Refinery, I saw how backend systems affected frontline) Tj
+T* (workers — that made me realize software must solve real human problems. I’m excited) Tj
+T* (to join a company that values end-to-end ownership because I thrive when I can ship) Tj
+T* (value, not just write code.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 513.0711023622046696 Td
+(Answering Tips:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 493.2285826771653205 Td
+(• Connect your motivation to your projects — show you’ve thought about impact, not just) Tj
+T* (tech.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 453.5435433070865656 Td
+(• Mention collaboration, ownership, and user impact — these are cultural signals FAANG) Tj
+T* (values.) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 413.8585039370078107 Td
+(• What interviewers are really looking for: Are you curious? Do you care about users?) Tj
+T* (Are you a team player?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+70.8661417322834666 360.0002362204724022 Td
+(Potential Follow-up Questions:) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 340.1577165354329964 Td
+(• Tell me about a time you had to collaborate with a designer or product manager — how) Tj
+T* (did you handle disagreement?) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+85.0393700787401627 300.4726771653542983 Td
+(• What’s one thing you’d change about your own projects if you had more time?) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ]
+/Count 5
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 13 0 R
+/F2 14 0 R
+/F3 15 0 R
+/F4 16 0 R
+/F5 17 0 R
+/F6 18 0 R
+/F7 19 0 R
+/F8 20 0 R
+/F9 21 0 R
+/F10 22 0 R
+/F11 23 0 R
+/F12 24 0 R
+/F13 25 0 R
+/F14 26 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+27 0 obj
+<<
+/Producer (jsPDF 3.0.3)
+/CreationDate (D:20251004183813+05'30')
+>>
+endobj
+28 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 29
+0000000000 65535 f 
+0000018471 00000 n 
+0000020318 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000003667 00000 n 
+0000003804 00000 n 
+0000008584 00000 n 
+0000008721 00000 n 
+0000012462 00000 n 
+0000012600 00000 n 
+0000015746 00000 n 
+0000015885 00000 n 
+0000018553 00000 n 
+0000018679 00000 n 
+0000018810 00000 n 
+0000018944 00000 n 
+0000019082 00000 n 
+0000019206 00000 n 
+0000019335 00000 n 
+0000019467 00000 n 
+0000019603 00000 n 
+0000019731 00000 n 
+0000019858 00000 n 
+0000019987 00000 n 
+0000020120 00000 n 
+0000020222 00000 n 
+0000020571 00000 n 
+0000020657 00000 n 
+trailer
+<<
+/Size 29
+/Root 28 0 R
+/Info 27 0 R
+/ID [ <3282EA8F619C1740EEC1230930D7FDFD> <3282EA8F619C1740EEC1230930D7FDFD> ]
+>>
+startxref
+20761
+%%EOF
